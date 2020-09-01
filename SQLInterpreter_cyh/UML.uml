@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.demo.AndInterpreter</OriginalElement>
+  <nodes>
+    <node x="483.0" y="-43.5">com.example.demo.ConditionInterpreter</node>
+    <node x="270.0" y="-55.0">com.example.demo.AndInterpreter</node>
+    <node x="326.0" y="109.0">com.example.demo.CriterionGeneratorTest</node>
+    <node x="57.00000000000003" y="-55.0">com.example.demo.OrInterpreter</node>
+    <node x="-160.0" y="-43.5">com.example.demo.NotInterpreter</node>
+    <node x="163.5" y="-158.0">com.example.demo.Interpreter</node>
+    <node x="-160.0" y="90.0">com.example.demo.CriterionGenerator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.demo.ConditionInterpreter" target="com.example.demo.Interpreter">
+      <point x="0.0" y="-38.5" />
+      <point x="579.5" y="-85.0" />
+      <point x="332.375" y="-85.0" />
+      <point x="72.375" y="26.5" />
+    </edge>
+    <edge source="com.example.demo.OrInterpreter" target="com.example.demo.Interpreter">
+      <point x="0.0" y="-50.0" />
+      <point x="153.5" y="-75.0" />
+      <point x="235.875" y="-75.0" />
+      <point x="-24.125" y="26.5" />
+    </edge>
+    <edge source="com.example.demo.AndInterpreter" target="com.example.demo.Interpreter">
+      <point x="0.0" y="-50.0" />
+      <point x="366.5" y="-75.0" />
+      <point x="284.125" y="-75.0" />
+      <point x="24.125" y="26.5" />
+    </edge>
+    <edge source="com.example.demo.NotInterpreter" target="com.example.demo.Interpreter">
+      <point x="0.0" y="-38.5" />
+      <point x="-61.5" y="-85.0" />
+      <point x="187.625" y="-85.0" />
+      <point x="-72.375" y="26.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.2000000000000002" x="362.83333333333326" y="119.24999999999994" />
+  <SelectedNodes>
+    <node>com.example.demo.ConditionInterpreter</node>
+    <node>com.example.demo.AndInterpreter</node>
+    <node>com.example.demo.CriterionGeneratorTest</node>
+    <node>com.example.demo.OrInterpreter</node>
+    <node>com.example.demo.NotInterpreter</node>
+    <node>com.example.demo.Interpreter</node>
+    <node>com.example.demo.CriterionGenerator</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
