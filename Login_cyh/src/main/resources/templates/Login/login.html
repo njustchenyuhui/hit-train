@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script src="../assets/jquery/jquery-1.11.2.js"></script>
+
+<body>
+<div>
+            <h4 style="text-align:center" >
+                请输入您的登录信息
+            </h4>
+            <div class="space-20"></div>
+            <span>
+                <input type="text" style="text-align:center" id="username" placeholder="请填写用户名" data-username="" autocomplete="on" required />
+            </span>
+            <div class="space-16"></div>
+            <span class="block input-icon input-icon-right">
+                <input type="password" style="text-align:center" id="password"  placeholder="请填写密码" data-password="" required />
+            </span>
+            <div class="space-16"></div>
+
+            <label class="inline">
+
+            </label>
+
+            <div class="space-32"></div>
+            <div class="space-26"></div>
+
+            <button style="text-align:center" onclick="login();">登录</button>
+            <div class="space-8"></div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    function login() {
+        var password= document.getElementById("password").value;
+        var username = document.getElementById("username").value;
+        $.ajax({
+            type: "post",
+            url: "../Login/login_check",
+            dataType: "text",
+            async: false,
+            data: {
+                userName: username,
+                password: password
+            },
+            success: function (response) {
+                var testJson = eval(response);
+                if (testJson[0]["msg"] == 'success') {
+                    window.location.href = "../Login/login_success?random=" + Math.floor(Math.random() * (100000 + 1));
+                }
+                else {
+                    alert(testJson[0]["failInfo"]);
+                    document.getElementById("username").value = "";
+                    document.getElementById("password").value = "";
+                }
+            }
+        });
+    }
+
+
+
+</script>
+</body>
+</html>

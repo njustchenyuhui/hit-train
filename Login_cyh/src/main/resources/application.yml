@@ -1,0 +1,22 @@
+server:
+ port: 8080
+
+
+spring:
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+#    content-type: text/html # ;charset=<encoding> is added
+    mode: LEGACYHTML5
+
+
+  datasource:
+         driver-class-name: com.mysql.cj.jdbc.Driver
+         url: jdbc:mysql://127.0.0.1:3306/hit_train?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2B8
+         username: root
+         password: 123456
+
+
